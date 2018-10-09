@@ -5,3 +5,6 @@ export const makefile_cpp: string = 'CC\t\t:= g++\nC_FLAGS := -std=c++17 -Wall -
 export const main_cpp: string = '#include <iostream>\n\nint main(int argc, char *argv[]) {\n\tstd::cout << "Hello Easy C++ project!" << std::endl;\n}';
 export const main_c: string = '#include <stdio.h>\n\nint main(int argc, char *argv[]) {\n\tprintf("Hello World");\n}';
 export const directories: string[] = new Array(".vscode", "bin", "include", "lib", "src");
+
+export const directories_OF: string[] = new Array(".vscode", "addons", "bin/data", "src");
+export const launch_json_OF: any = { "version": "0.2.0", "configurations": [{ "name": "Debug", "type": "cppdbg", "request": "launch", "program": "/usr/bin/make", "args": ["RunDebug"], "stopAtEntry": false, "cwd": "${workspaceRoot}", "environment": [], "externalConsole": true, "preLaunchTask": "build", "linux": { "MIMode": "gdb" }, "osx": { "MIMode": "lldb" }, "windows": { "MIMode": "gdb" } }] };

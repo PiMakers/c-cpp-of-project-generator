@@ -12,7 +12,11 @@ export async function activate(context: vscode.ExtensionContext) {
         project.createProject("cpp");
     });
 
-    context.subscriptions.push(createCProjectCommand, createCppProjectCommand);
+    let createOFProjectCommand = vscode.commands.registerCommand('extension.createOFProject', () => {
+        project.createProject("OF");
+    });
+
+    context.subscriptions.push(createCProjectCommand, createCppProjectCommand, createOFProjectCommand);
 }
 
 export function deactivate() {
