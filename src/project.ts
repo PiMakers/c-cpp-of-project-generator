@@ -32,13 +32,13 @@ export namespace project {
                     break;
                 case 'OF':
                     fs.writeFileSync(path.join(location, '.vscode', 'launch.json'), JSON.stringify(content.launch_json_OF, null, 4));
-
-                    fs.copySync('/mnt/LinuxData/OF/openFrameworks/scripts/templates/linuxarmv6l/config.make',path.join(location, 'config.make'),{ overwrite: false });
-                    fs.copySync('/mnt/LinuxData/OF/openFrameworks/scripts/templates/linuxarmv6l/Makefile',path.join(location, 'Makefile'),{ overwrite: false });
-                    fs.copySync('/mnt/LinuxData/OF/openFrameworks/scripts/templates/linuxarmv6l/addons.make',path.join(location, 'addons.make'),{ overwrite: false });
-                    fs.copySync('/mnt/LinuxData/OF/openFrameworks/scripts/templates/linuxarmv6l/src/ofApp.cpp',path.join(location, 'src','ofApp.cpp'),{ overwrite: false });
-                    fs.copySync('/mnt/LinuxData/OF/openFrameworks/scripts/templates/linuxarmv6l/src/ofApp.h',path.join(location, 'src','ofApp.h'),{ overwrite: false });
-                    fs.copySync('/mnt/LinuxData/OF/openFrameworks/scripts/templates/linuxarmv6l/src/main.cpp',path.join(location, 'src','main.cpp'),{ overwrite: false });
+                    fs.writeFileSync(path.join(location, '.vscode', 'tasks.json'), JSON.stringify(content.tasks_json_OF, null, 4));
+                    fs.copySync('/mnt/LinuxData/OF/openFrameworks/scripts/templates/vscode/config.make',path.join(location, 'config.make'),{ overwrite: false });
+                    fs.copySync('/mnt/LinuxData/OF/openFrameworks/scripts/templates/vscode/Makefile',path.join(location, 'Makefile'),{ overwrite: false });
+                    fs.copySync('/mnt/LinuxData/OF/openFrameworks/scripts/templates/vscode/addons.make',path.join(location, 'addons.make'),{ overwrite: false });
+                    fs.copySync('/mnt/LinuxData/OF/openFrameworks/scripts/templates/vscode/src/ofApp.cpp',path.join(location, 'src','ofApp.cpp'),{ overwrite: false });
+                    fs.copySync('/mnt/LinuxData/OF/openFrameworks/scripts/templates/vscode/src/ofApp.h',path.join(location, 'src','ofApp.h'),{ overwrite: false });
+                    fs.copySync('/mnt/LinuxData/OF/openFrameworks/scripts/templates/vscode/src/main.cpp',path.join(location, 'src','main.cpp'),{ overwrite: false });
                     break;
                 default:
                     console.log('Invalid file type');
@@ -47,8 +47,6 @@ export namespace project {
             console.error(err);
         }
     }
-
-
     export function createFolders(type: string, location: string): void {
         if (type === 'OF') {
             content.directories_OF.forEach(function (dir: string) {

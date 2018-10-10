@@ -1,9 +1,9 @@
 {
-    "name": "c-cpp-project-generator",
-    "displayName": "C/C++ Project Generator",
+    "name": "c-cpp-of-project-generator",
+    "displayName": "C/C++/OF Project Generator",
     "description": "Generate C/C++ Projects",
     "version": "1.1.1",
-    "publisher": "danielpinto8zz6",
+    "publisher": "PiMaker (forked from: danielpinto8zz6",
     "engines": {
         "vscode": "^1.21.0"
     },
@@ -12,7 +12,8 @@
     ],
     "activationEvents": [
         "onCommand:extension.createCProject",
-        "onCommand:extension.createCppProject"
+        "onCommand:extension.createCppProject",
+        "onCommand:extension.createOFProject"
     ],
     "main": "./out/extension",
     "contributes": {
@@ -53,9 +54,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/danielpinto8zz6/c-cpp-project-generator.git"
+        "url": "git+https://github.com/PiMakers/c-cpp-project-generator"
     },
-    "author": "danielpinto8zz6",
+    "author": "danielpinto8zz6 + PiMaker",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/danielpinto8zz6/c-cpp-project-generator/issues"
