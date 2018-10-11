@@ -54,7 +54,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/PiMakers/c-cpp-project-generator"
+        "url": "git+https://github.com/PiMakers/c-cpp-of-project-generator.git"
     },
     "author": "danielpinto8zz6 + PiMaker",
     "license": "ISC",
