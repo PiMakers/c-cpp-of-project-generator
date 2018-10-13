@@ -1,4 +1,4 @@
-# c-cpp-project-generator README
+# c-cpp-of-project-generator README
 
 Create C/C++ projects
 
